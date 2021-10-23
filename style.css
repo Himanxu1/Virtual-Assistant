@@ -5,7 +5,8 @@
 body {
     background-color: #FEF5ED;
     font-family: 'Poppins', sans-serif;
-    width: 100vw;
+    width: 100%;
+    margin: 2em 0 0 0;
 }
 
 h1 {
@@ -17,7 +18,7 @@ p {
 #main {
     display: flex;
     align-items: center;
-    margin: 5em 0 0 7em;
+    margin: 5em 0 -8em 7em;
 }
 #input {
     margin-left: 17em;
@@ -25,12 +26,14 @@ p {
     box-shadow: -10px -10px 20px rgb(0 0 0 / 25%), 10px 10px 20px rgb(0 0 0 / 25%);
     border-radius: 18px;
     /* height: 2em; */
+    width: 19em;
     padding: 11px;
 }
 #input input {
     border: none;
     background: #feedde;
     outline: none;
+    width: 92%;
 }
 .fa-microphone-alt {
     font-size: 1.5em;
@@ -38,7 +41,7 @@ p {
 }
 footer {
     text-align: center;
-     margin: 15em 0 0 6em;  
+    margin: 6.5em 0 0 6em;
     /* white-space: nowrap; */
 }
 span {
@@ -47,28 +50,29 @@ span {
 .thing {
     display: flex;
     align-items: center;
+    margin-bottom: 4em;
 }
-@media only screen and (max-width: 900px) {
-    #main {
-        margin: 0px;
-        flex-direction: column;
-    }
-    #input {
-        margin: 0px;
-    }
-    .fa-microphone-alt {
-       margin-top: 11px;
-    }
-    .thing {
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-    #mic {
-        margin-right: 1em;
-    }
-    footer {
-        margin: 2em 0 0 1em;
-    font-size: 12px;
-    }
-    
+#weather {
+    /* background: #FEEDDE;
+    box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.25), 10px 10px 20px rgba(0, 0, 0, 0.25); */
+    border-radius: 18px;
+    width: 24em;
+    height: 10em;
 }
+
+#result {
+    background: #FEEDDE;
+    box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.25), 10px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    width: 29em;
+    height: 17em;
+}
+.extra {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.team {
+    font-weight: 600;
+}
+
