@@ -17,7 +17,6 @@ $.get("https://ipgeolocation.abstractapi.com/v1/?api_key=08eb2e11cd024fc7a117b57
 
 var SpeechRecognition = window.webkitSpeechRecognition
 var recognition = new SpeechRecognition()
-var Speechbox = $("#textarea")
 var Content = ""
 recognition.continuous = true
 
@@ -25,7 +24,6 @@ recognition.onresult = function (event) {
     var current = event.resultIndex
     var transcript = event.results[current][0].transcript
     Content += transcript
-    Speechbox.val(Content)
     $.get(`https://api.sijey.repl.co/search?q=${Content}`, 
         function(data) {
             data = JSON.parse(JSON.stringify(data))
@@ -41,14 +39,12 @@ recognition.onresult = function (event) {
 }
 
 $(document).ready(function () {
-    $("#start").click(function () {
-        if ($(this).text() == "Stop Recording") {
-            $(this).html("Start Recording")
-            $("#instructions").html("")
+    $("#mic").click(function () {
+        if (document.getElementById("mic").className === "Stop") {
+            document.getElementById("mic").className = "Start"
             recognition.stop()
         } else {
-            $(this).html("Stop Recording")
-            $("#instructions").html("Voice Recognition is on")
+            document.getElementById("mic").className = "Stop"
             if (Content.length) {
                 Content += " "
             }

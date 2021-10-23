@@ -67,6 +67,10 @@ span {
     width: 29em;
     height: 17em;
 }
+
+#re-showcase-img {
+    cursor: pointer;
+}
 .extra {
     display: flex;
     justify-content: space-around;
