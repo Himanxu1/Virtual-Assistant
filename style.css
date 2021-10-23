@@ -11,6 +11,10 @@ body {
 
 h1 {
  text-align: center;
+ font-size: medium;
+}
+h3 {
+    color: gray;
 }
 p {
     text-align: center;
@@ -58,6 +62,9 @@ span {
     border-radius: 18px;
     width: 24em;
     height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #result {
@@ -66,6 +73,7 @@ span {
     border-radius: 18px;
     width: 29em;
     height: 17em;
+    padding: 1em;
 }
 
 #re-showcase-img {

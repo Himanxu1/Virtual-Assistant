@@ -27,7 +27,7 @@ recognition.onresult = function (event) {
     $.get(`https://api.sijey.repl.co/search?q=${Content}`, 
         function(data) {
             data = JSON.parse(JSON.stringify(data))
-            document.getElementById("re").style.visibility = "visible"
+            // document.getElementById("re").style.visibility = "visible"
             document.getElementById("re-info").innerText = `I Got This From ${data.domain}`
             document.getElementById("re-showcase-img").src = `https://www.google.com/s2/favicons?domain=${data.domain}`
             document.getElementById("name").innerText = data.name
